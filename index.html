@@ -13,25 +13,61 @@ HINT for TODO 6: You can use the height attribute set to 200 to make the image s
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
 
 <!-- TODO 7: Add the Contact Me and About Me page links -->
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Timothy Tan's Portfolio</title>
-    </head>
-
-    <body>
-        <h1>Timothy Tan's Portfolio</h1>
-        <h2>I'm a Web Developer</h2>
-        <hr />
-        <a href="./public/movie-ranking.html">Movie Ranking Projects</a>
-        <h3><img src="./assets/images/timothy_movie_ranking.png" height="300" alt="Timothy's top shows of all-time"></h3>
-
-        <h3><a href="./public/birthday-invite.html">Birthday Invite Project</a></h3>
-        <img src="./assets/images/birthday-invite2.png" height="300" alt="Timothy's birthday invite page">
-        <hr />
-        <a href="./public/about.html">About Me</a> 
-        <a href="./public/contact.html">Contact Me</a>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timothy Tan's Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            timothy<span class="highlight">tan</span>
+        </div>
+        <div class="tagline">Building innovative web experiences</div>
+        <div class="subtitle">to showcase creativity and technical skills</div>
+        
+        <div class="projects-grid">
+            <a href="./public/movie-ranking.html" class="project-card">
+                <div class="project-info">
+                    <div class="project-icon movie">🎬</div>
+                    <div class="project-title">Movie Ranking Project</div>
+                </div>
+                <div class="project-action">View Project</div>
+            </a>
+            
+            <a href="./public/birthday-invite.html" class="project-card">
+                <div class="project-info">
+                    <div class="project-icon birthday">🎉</div>
+                    <div class="project-title">Birthday Invite</div>
+                </div>
+                <div class="project-action">See Invite</div>
+            </a>
+            
+            <a href="./public/about.html" class="project-card">
+                <div class="project-info">
+                    <div class="project-icon about">👨‍💻</div>
+                    <div class="project-title">About Me</div>
+                </div>
+                <div class="project-action">Learn More</div>
+            </a>
+            
+            <a href="./public/contact.html" class="project-card">
+                <div class="project-info">
+                    <div class="project-icon contact">📧</div>
+                    <div class="project-title">Contact</div>
+                </div>
+                <div class="project-action">Get in Touch</div>
+            </a>
+        </div>
+        
+        <div class="footer-links">
+            <a href="#" class="footer-link">LinkedIn</a>
+            <a href="#" class="footer-link">GitHub</a>
+            <a href="#" class="footer-link">Twitter</a>
+        </div>
+    </div>
+</body>
 </html>
