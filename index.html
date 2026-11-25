@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Timothy Tan · Software Engineer</title>
-  <meta name="description" content="Timothy Tan is an IT student at Monash University building things for the web. Projects, experience and blog.">
+  <meta name="description" content="Timothy Tan is an IT student at Monash University. Case studies of things I built, and a journal of decisions, experiments and lessons.">
   <meta name="color-scheme" content="light dark">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,62 +14,120 @@
 </head>
 <body>
 <nav class="top"><div class="wrap">
-  <strong>tim.dev <span class="guess">domain?</span></strong>
-  <ul><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#blog">Blog</a></li></ul>
+  <strong>timothytan.dev</strong>
+  <ul>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#work">Projects</a></li>
+    <li><a href="#journal">Journal</a></li>
+  </ul>
 </div></nav>
 
-<header class="hero">
-  <div class="copy wrap narrow"><div>
-    <h1>Hi, I'm Tim. I build things for the web<span class="cur">_</span></h1>
-    <p class="lede">I study IT at Monash and I'm looking for software engineering roles. Below are things I've built and where I've worked. My writing is at the bottom. <span class="guess">placeholder copy</span></p>
-    <div class="links">
-      <a class="primary" href="#projects">See projects</a>
+<header class="hero"><div class="wrap">
+  <h1>Timothy Tan</h1>
+  <div class="social-icons">
+    <a href="https://github.com/tlmotan" aria-label="GitHub"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+    <a href="mailto:tantimothy44@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+  </div>
+
+  <p class="lede">Software Engineer Intern at <a href="https://www.westerndigital.com/en-ap">Western Digital</a>.<span id="lede-more" hidden> I'm currently studying Bachelor of Computer Science (Advanced Computer Science) at Monash University.</span>
+    <button class="lede-toggle" id="lede-toggle" type="button" aria-expanded="false" aria-controls="lede-more"><span id="lede-label">Show more</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></p>
+  <!-- <p class="lede">This site is where I write up what I build, the decisions behind it, and the parts that went wrong. </p> -->
+  <div class="now"><b>Now</b><span>Building JalanFlow, a simulator that identifies bottlenecks in road lanes. Offers a solution. And backed by real data and proven algorithms<time>Nov 2026</time></span></div>
+  <!-- <div class="links">
+      <a class="primary" href="#work">Read the case studies</a>
       <a class="gh" href="https://github.com/tlmotan"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub · tlmotan<svg class="ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
       <a class="gh" href="#contact"><svg class="doc" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>Resume (PDF)</a>
-    </div>
-  </div></div>
-</header>
+    </div> -->
+</div></header>
 
-<section id="projects"><div class="wrap narrow">
-  <h2>Projects <small>use the arrows or swipe</small></h2>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <p class="sub">Industry and university.</p>
+  <ul class="xp">
+    <li><div class="logo-box"><img src="logos/western-digital.png" alt="Western Digital logo"></div><div class="when">Nov 2026 – Feb 2027</div><div><h3><button class="xp-toggle" type="button" aria-expanded="false"><span>Software Engineer Intern <span class="org">· Western Digital</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></h3><div class="xp-detail"><div>
+      <p class="where">Petaling Jaya, Malaysia</p>
+      <p class="tech">C# · ASP.NET · Docker</p>
+    </div></div></div></li>
+    <li><div class="logo-box cover"><img src="logos/roboclub.png" alt="RoboClub Monash University Malaysia logo"></div><div class="when">Aug 2026 – Present</div><div><h3><button class="xp-toggle" type="button" aria-expanded="false"><span>Technical Team Lead <span class="org">· RoboClub Monash University Malaysia</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></h3><div class="xp-detail"><div>
+      <p class="where">Kuala Lumpur, Malaysia · Part-time</p>
+      <p class="role"><strong>Technical Team Lead</strong> · Nov 2026 – Present · Remote</p>
+      <p>Technical Lead for the 7th Kibo Robot Programming Challenge 2026/2027.</p>
+      <ul>
+        <li>Leading a team of 5 to engineer the Int-Ball2 robot to navigate the ISS's Kibo module.</li>
+      </ul>
+      <p class="role"><strong>Technical Team, Software Department</strong> · Aug 2026 – Present · On-site</p>
+    </div></div></div></li>
+    <li><div class="logo-box"><img src="logos/fxa-group.png" alt="FXA Group logo"></div><div class="when">Dec 2024 – Feb 2025</div><div><h3><button class="xp-toggle" type="button" aria-expanded="false"><span>Software Engineer Intern <span class="org">· FXA Group</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></h3><div class="xp-detail"><div>
+      <p class="where">Asia Jaya, Malaysia · <a href="https://www.fxa-group.com/" target="_blank" rel="noopener">fxa-group.com</a></p>
+      <ul>
+        <li>Learned Angular <strong>without prior experience</strong> and engineered a live grading portal using Angular, HTML, CSS and JavaScript.</li>
+        <li>Integrated <strong>12+ REST APIs</strong> connecting the backend to the frontend UI to sync live information.</li>
+        <li>Architected interactive <strong>Highcharts dashboards</strong> processing complex MySQL queries, tracking real-time FFB quality KPIs.</li>
+        <li>Led a team of 3 people to complete the project within <strong>10 weeks</strong>, three weeks before the deadline.</li>
+      </ul>
+      <p class="tech">Angular · JavaScript · HTML · CSS · REST APIs · MySQL · Highcharts</p>
+    </div></div></div></li>
+  </ul>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <h2>Selected work</h2>
+  <!-- <p class="sub">Each one is a short case study: the problem, one key decision, what broke, and what I'd change next time.</p> -->
   <div class="carousel" id="carousel" aria-roledescription="carousel" aria-label="Projects" tabindex="0">
     <div class="track">
-      <article class="slide" data-i="0" aria-roledescription="slide" aria-label="1 of 4">
-        <div class="shot">screenshot of find-your-pack</div>
+      <article class="slide" data-i="0" aria-roledescription="slide" aria-label="1 of 2">
+        <div class="shot"><img src="images/find-your-pack/stage.jpg" alt="Two hosts on stage in front of a screen reading Find Your Pack" loading="lazy"></div>
         <div class="body">
-          <h3>find-your-pack</h3>
-          <ul class="tags"><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z"/></svg>Next.js?</li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M24 22.525H0l12-21.05 12 21.05z"/></svg>Vercel</li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="#3178C6"><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/></svg>TypeScript?</li></ul>
-          <p>One sentence on the problem it solves and who it's for. <span class="guess">placeholder</span></p>
-          <div class="links"><a href="#">Live demo</a><a href="#">Code</a></div>
+          <h3>Find Your Pack</h3>
+          <p class="one">Replaced handwritten group-assignment slips at a live event. 113 players checked in by QR code, and every phone revealed its secret group at the same moment.</p>
+          <div class="stack">Next.js · TypeScript · Supabase (Postgres + Realtime) · Playwright · k6</div>
+
+          <span class="more-hint">View case study →</span>
+          <template class="detail">
+            <p class="cs-date">Sep 2026</p>
+            <ul class="cs-points">
+              <li>Ran live with <strong>113 concurrent players</strong> and no failed reveals. Organisers no longer had to write up, hand out or reshuffle paper slips.</li>
+              <li>Groups are built from who actually checked in, so no-shows no longer leave groups uneven.</li>
+              <li>Players never sign up or share personal data, so there's nothing stopping them from joining, and every player got in within the check-in window.</li>
+              <li>Load-tested with <strong>300+ simulated users</strong> (nearly 3x the live crowd), so the same setup works for bigger events.</li>
+              <li>Reveals can't leak early: timing and group secrecy are enforced on the server, so nobody can find out their group ahead of time by inspecting the app.</li>
+              <li>Found and documented a real-world issue during the live run (players whose phones locked dropped off the host's live count), which now guides the next version.</li>
+            </ul>
+            <div class="cs-video"><iframe src="https://www.youtube-nocookie.com/embed/LgA9axtQIX4" title="Find Your Pack demo video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="cs-gallery">
+              <img src="images/find-your-pack/phone.jpg" alt="An audience member holding up a phone towards the stage screens showing a QR code" loading="lazy">
+              <img src="images/find-your-pack/crowd.jpg" alt="Players gathered in their groups at the event" loading="lazy">
+            </div>
+            <div class="links"><a href="https://find-your-pack.vercel.app" target="_blank" rel="noopener">Live app</a><a href="https://www.youtube.com/watch?v=LgA9axtQIX4" target="_blank" rel="noopener">Demo video</a></div>
+          </template>
         </div>
       </article>
-      <article class="slide" data-i="1" aria-roledescription="slide" aria-label="2 of 4">
-        <div class="shot">screenshot</div>
+      <article class="slide" data-i="1" aria-roledescription="slide" aria-label="2 of 2">
+        <div class="shot"><img src="images/jalanflow/result.jpg" alt="JalanFlow showing a map of highways between Kota Kemuning and Petaling Jaya with the bottleneck stretch marked in red" loading="lazy"></div>
         <div class="body">
-          <h3>Next project</h3>
-          <ul class="tags"><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="#61DAFB"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"/></svg>React</li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="#3178C6"><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/></svg>TypeScript</li></ul>
-          <p>A uni or side project. Short blurb, stack and links. <span class="guess">placeholder</span></p>
-          <div class="links"><a href="#">Live demo</a><a href="#">Code</a></div>
+          <h3>JalanFlow</h3>
+          <p class="one">Finds the stretch of road that limits traffic flow between Kota Kemuning and Petaling Jaya, using OpenStreetMap lane data and max flow / min cut.</p>
+          <div class="stack">Go · TypeScript · Vite · MapLibre GL · OpenStreetMap</div>
+
+          <span class="more-hint">View case study →</span>
+          <template class="detail">
+            <p class="cs-date">Nov 2026 · In progress</p>
+            <ul class="cs-points">
+              <li>Models the highway network as a graph and runs max flow / min cut to find the bottleneck every route has to cross.</li>
+              <li>Tests cheap fixes in the model, such as adding one lane at the bottleneck, and shows how much more the network could carry.</li>
+              <li>Lists lane drops, the places where more lanes come in than carry on, biggest squeeze first.</li>
+              <li>Works from lane counts in OpenStreetMap, not live traffic. Phase 1 covers the KESAS (E5) and LDP (E11) corridors.</li>
+            </ul>
+            <div class="cs-gallery shots">
+              <img src="images/jalanflow/bottleneck.jpg" alt="Detail view of the bottleneck: a 3-lane stretch of E5 Lebuhraya Shah Alam" loading="lazy">
+              <img src="images/jalanflow/lane-drops.jpg" alt="List of lane drops ranked by biggest squeeze first, next to the map" loading="lazy">
+            </div>
+          </template>
         </div>
       </article>
-      <article class="slide" data-i="2" aria-roledescription="slide" aria-label="3 of 4">
-        <div class="shot">screenshot</div>
-        <div class="body">
-          <h3>Next project</h3>
-          <ul class="tags"><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="#00ADD8"><path d="M1.811 10.231c-.047 0-.058-.023-.035-.059l.246-.315c.023-.035.081-.058.128-.058h4.172c.046 0 .058.035.035.07l-.199.303c-.023.036-.082.07-.117.07zM.047 11.306c-.047 0-.059-.023-.035-.058l.245-.316c.023-.035.082-.058.129-.058h5.328c.047 0 .07.035.058.07l-.093.28c-.012.047-.058.07-.105.07zm2.828 1.075c-.047 0-.059-.035-.035-.07l.163-.292c.023-.035.07-.07.117-.07h2.337c.047 0 .07.035.07.082l-.023.28c0 .047-.047.082-.082.082zm12.129-2.36c-.736.187-1.239.327-1.963.514-.176.046-.187.058-.34-.117-.174-.199-.303-.327-.548-.444-.737-.362-1.45-.257-2.115.175-.795.514-1.204 1.274-1.192 2.22.011.935.654 1.706 1.577 1.835.795.105 1.46-.175 1.987-.77.105-.13.198-.27.315-.434H10.47c-.245 0-.304-.152-.222-.35.152-.362.432-.97.596-1.274a.315.315 0 01.292-.187h4.253c-.023.316-.023.631-.07.947a4.983 4.983 0 01-.958 2.29c-.841 1.11-1.94 1.8-3.33 1.986-1.145.152-2.209-.07-3.143-.77-.865-.655-1.356-1.52-1.484-2.595-.152-1.274.222-2.419.993-3.424.83-1.086 1.928-1.776 3.272-2.02 1.098-.2 2.15-.07 3.096.571.62.41 1.063.97 1.356 1.648.07.105.023.164-.117.2m3.868 6.461c-1.064-.024-2.034-.328-2.852-1.029a3.665 3.665 0 01-1.262-2.255c-.21-1.32.152-2.489.947-3.529.853-1.122 1.881-1.706 3.272-1.95 1.192-.21 2.314-.095 3.33.595.923.63 1.496 1.484 1.648 2.605.198 1.578-.257 2.863-1.344 3.962-.771.783-1.718 1.273-2.805 1.495-.315.06-.63.07-.934.106zm2.78-4.72c-.011-.153-.011-.27-.034-.387-.21-1.157-1.274-1.81-2.384-1.554-1.087.245-1.788.935-2.045 2.033-.21.912.234 1.835 1.075 2.21.643.28 1.285.244 1.905-.07.923-.48 1.425-1.228 1.484-2.233z"/></svg>Go</li></ul>
-          <p>Something that shows a different skill, like a backend or a CLI. <span class="guess">placeholder</span></p>
-          <div class="links"><a href="#">Live demo</a><a href="#">Code</a></div>
-        </div>
-      </article>
-      <article class="slide" data-i="3" aria-roledescription="slide" aria-label="4 of 4">
-        <div class="shot">screenshot</div>
-        <div class="body">
-          <h3>Next project</h3>
-          <ul class="tags"><li>Python</li></ul>
-          <p>Three to five projects is plenty for a carousel. <span class="guess">placeholder</span></p>
-          <div class="links"><a href="#">Live demo</a><a href="#">Code</a></div>
-        </div>
-      </article>
+     
+     
     </div>
     <button class="nav prev" id="prev" aria-label="Previous project"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="nav next" id="next" aria-label="Next project"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -77,40 +135,36 @@
   <div class="dots" id="dots"></div>
 </div></section>
 
-<section id="experience"><div class="wrap narrow">
-  <h2>Experience <small>industry and university</small></h2>
-  <ul class="xp">
-    <li>
-      <div class="when">2026 · 3 mo<br><span class="kind ind">Industry</span></div>
-      <div><h3>Software Engineering Intern <span class="org">· Company name</span></h3>
-      <p>What you built or shipped, with a number if you have one (users, speed-up, tickets closed). <span class="guess">example entry</span></p>
-      <ul class="tags"><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="#61DAFB"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"/></svg>React</li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="#00ADD8"><path d="M1.811 10.231c-.047 0-.058-.023-.035-.059l.246-.315c.023-.035.081-.058.128-.058h4.172c.046 0 .058.035.035.07l-.199.303c-.023.036-.082.07-.117.07zM.047 11.306c-.047 0-.059-.023-.035-.058l.245-.316c.023-.035.082-.058.129-.058h5.328c.047 0 .07.035.058.07l-.093.28c-.012.047-.058.07-.105.07zm2.828 1.075c-.047 0-.059-.035-.035-.07l.163-.292c.023-.035.07-.07.117-.07h2.337c.047 0 .07.035.07.082l-.023.28c0 .047-.047.082-.082.082zm12.129-2.36c-.736.187-1.239.327-1.963.514-.176.046-.187.058-.34-.117-.174-.199-.303-.327-.548-.444-.737-.362-1.45-.257-2.115.175-.795.514-1.204 1.274-1.192 2.22.011.935.654 1.706 1.577 1.835.795.105 1.46-.175 1.987-.77.105-.13.198-.27.315-.434H10.47c-.245 0-.304-.152-.222-.35.152-.362.432-.97.596-1.274a.315.315 0 01.292-.187h4.253c-.023.316-.023.631-.07.947a4.983 4.983 0 01-.958 2.29c-.841 1.11-1.94 1.8-3.33 1.986-1.145.152-2.209-.07-3.143-.77-.865-.655-1.356-1.52-1.484-2.595-.152-1.274.222-2.419.993-3.424.83-1.086 1.928-1.776 3.272-2.02 1.098-.2 2.15-.07 3.096.571.62.41 1.063.97 1.356 1.648.07.105.023.164-.117.2m3.868 6.461c-1.064-.024-2.034-.328-2.852-1.029a3.665 3.665 0 01-1.262-2.255c-.21-1.32.152-2.489.947-3.529.853-1.122 1.881-1.706 3.272-1.95 1.192-.21 2.314-.095 3.33.595.923.63 1.496 1.484 1.648 2.605.198 1.578-.257 2.863-1.344 3.962-.771.783-1.718 1.273-2.805 1.495-.315.06-.63.07-.934.106zm2.78-4.72c-.011-.153-.011-.27-.034-.387-.21-1.157-1.274-1.81-2.384-1.554-1.087.245-1.788.935-2.045 2.033-.21.912.234 1.835 1.075 2.21.643.28 1.285.244 1.905-.07.923-.48 1.425-1.228 1.484-2.233z"/></svg>Go</li></ul></div>
-    </li>
-    <li>
-      <div class="when">2025 – now<br><span class="kind sch">University</span></div>
-      <div><h3>Teaching Associate / Club role <span class="org">· Monash</span></h3>
-      <p>Tutoring, a student club, a hackathon or a research assistant role all count here. <span class="guess">example entry</span></p></div>
-    </li>
-    <li>
-      <div class="when">2025<br><span class="kind sch">University</span></div>
-      <div><h3>Team project lead <span class="org">· FIT unit</span></h3>
-      <p>A big group project where you had a clear role is worth listing too. <span class="guess">example entry</span></p></div>
-    </li>
+<section id="journal"><div class="wrap">
+  <h2>Journal</h2>
+  <p class="sub">Short dated notes: experiments, debugging stories, and things I learned the hard way.</p>
+  <div class="filters" role="group" aria-label="Filter entries">
+    <button id="f-all" data-k="all" aria-pressed="true">All</button>
+    <button id="f-decision" data-k="decision" aria-pressed="false">Decisions</button>
+    <button id="f-debugging" data-k="debugging" aria-pressed="false">Debugging</button>
+    <button id="f-experiment" data-k="experiment" aria-pressed="false">Experiments</button>
+    <button id="f-lesson" data-k="lesson" aria-pressed="false">Lessons</button>
+  </div>
+  <ul class="log" id="log">
+    <li data-k="decision"><time>2026-11-25</time><div><span class="kind">Decision</span><a href="#">Why I rebuilt my portfolio without a framework</a><p>Three files, no build step, and what I gave up for it.</p></div></li>
   </ul>
+  <!-- <p class="more">All entries →</p> -->
 </div></section>
 
-<section id="blog"><div class="wrap narrow">
-  <h2>Blog <small>latest posts</small></h2>
-  <ul class="posts">
-    <li><time>2026-11-18</time><a href="#">What I learned deploying my first app on Vercel</a></li>
-    <li><time>2026-10-02</time><a href="#">Notes on functional programming from FIT2102</a></li>
-    <li><time>2026-08-21</time><a href="#">Example post title</a></li>
-  </ul>
-</div></section>
+<dialog class="cs" id="cs" aria-labelledby="cs-title">
+  <button class="x" id="cs-close" aria-label="Close">×</button>
+  <div class="shot" id="cs-shot"></div>
+  <div class="in"><h3 id="cs-title"></h3><p class="one" id="cs-one"></p><div class="stack" id="cs-stack"></div><div id="cs-body"></div></div>
+</dialog>
 
-<footer id="contact"><div class="wrap narrow">
-  <span>© 2026 Tim</span>
-  <span>github.com/tlmotan · email · LinkedIn</span>
+<footer id="contact"><div class="wrap">
+  <span>© 2026 Timo</span>
+  <div class="social-icons">
+    <a href="https://github.com/tlmotan" aria-label="GitHub"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+    <a href="mailto:tantimothy44@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+    <a href="https://www.linkedin.com/in/timothyzjtan" aria-label="LinkedIn"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+  </div>
 </div></footer>
+
 </body>
 </html>
