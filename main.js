@@ -60,3 +60,17 @@
     });
   });
 })();
+(() => {
+  const btn = document.getElementById('theme-toggle'), html = document.documentElement;
+  const mq = matchMedia('(prefers-color-scheme: dark)');
+  const isDark = () => html.dataset.theme ? html.dataset.theme === 'dark' : mq.matches;
+  const label = () => btn.setAttribute('aria-label', isDark() ? 'Switch to light mode' : 'Switch to dark mode');
+  btn.addEventListener('click', () => {
+    const next = isDark() ? 'light' : 'dark';
+    html.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    label();
+  });
+  mq.addEventListener('change', label);
+  label();
+})();
