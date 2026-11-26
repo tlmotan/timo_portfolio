@@ -23,8 +23,16 @@
     document.getElementById('cs-one').innerHTML = q('.one').innerHTML;
     document.getElementById('cs-stack').innerHTML = q('.stack').innerHTML;
     const body = document.getElementById('cs-body'); body.replaceChildren(q('template.detail').content.cloneNode(true));
+    dlg.querySelectorAll('#cs-shot img, .cs-gallery img').forEach(im => { im.tabIndex = 0; im.setAttribute('role', 'button'); im.setAttribute('aria-label', 'Enlarge photo: ' + im.alt); });
     dlg.showModal();
   }
+  // Photo zoom: a second dialog stacked on top of the case study
+  const zoom = document.getElementById('zoom'), zoomImg = document.getElementById('zoom-img');
+  const zoomable = e => e.target.closest('#cs-shot img, .cs-gallery img');
+  function openZoom(im){ zoomImg.src = im.currentSrc || im.src; zoomImg.alt = im.alt; zoom.showModal(); }
+  dlg.addEventListener('click', e => { const im = zoomable(e); if (im) openZoom(im); });
+  dlg.addEventListener('keydown', e => { const im = zoomable(e); if (im && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openZoom(im); } });
+  zoom.addEventListener('click', () => zoom.close());   // click anywhere (photo or backdrop) to zoom back out
   document.getElementById('cs-close').onclick = () => dlg.close();
   dlg.addEventListener('close', () => document.getElementById('cs-body').replaceChildren());   // stops any playing video
   dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
