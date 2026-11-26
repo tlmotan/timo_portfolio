@@ -51,6 +51,25 @@
     items.forEach(li => { li.hidden = b.dataset.k !== 'all' && li.dataset.k !== b.dataset.k; });
   }));
 })();
+(() => {   // Journal: an entry with a <template class="detail"> opens in a dialog; its id doubles as a shareable #link
+  const dlg = document.getElementById('je'), $ = id => document.getElementById(id);
+  const entries = [...document.querySelectorAll('#log li')].filter(li => li.querySelector('template.detail'));
+  function open(li){
+    $('je-kind').textContent = li.querySelector('.kind').textContent;
+    $('je-date').textContent = li.querySelector('time').textContent;
+    $('je-title').textContent = li.querySelector('a').textContent;
+    $('je-one').textContent = li.querySelector('div > p').textContent;
+    $('je-body').replaceChildren(li.querySelector('template.detail').content.cloneNode(true));
+    dlg.showModal(); dlg.scrollTop = 0;
+    if (li.id) history.replaceState(null, '', '#' + li.id);
+  }
+  entries.forEach(li => li.addEventListener('click', e => { e.preventDefault(); open(li); }));
+  $('je-close').onclick = () => dlg.close();
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('close', () => history.replaceState(null, '', location.pathname + location.search));
+  const linked = entries.find(li => li.id && '#' + li.id === location.hash);
+  if (linked) open(linked);
+})();
 (() => {
   const btn = document.getElementById('lede-toggle'), more = document.getElementById('lede-more');
   btn.addEventListener('click', () => {

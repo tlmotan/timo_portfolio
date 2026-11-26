@@ -768,6 +768,57 @@ dialog.zoom[open] {
   color: var(--muted);
   font-size: 15px;
 }
+.log li:has(template.detail) {
+  cursor: pointer;
+}
+.log li:has(template.detail):hover a {
+  text-decoration: underline;
+}
+.je .in {
+  padding: 28px 28px 32px;
+}
+.je-meta {
+  margin: 0 48px 8px 0;
+  font: 500 11px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+.je-body {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+  line-height: 1.65;
+}
+.je-body p {
+  margin: 0 0 14px;
+}
+.je-body h4 {
+  margin: 26px 0 8px;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+.je-body ul {
+  margin: 0 0 14px;
+  padding-left: 20px;
+}
+.je-body li + li {
+  margin-top: 8px;
+}
+.je-body strong {
+  font-weight: 600;
+}
+.je-body code {
+  font: 0.88em var(--mono);
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 1px 5px;
+}
+.je-body > :last-child {
+  margin-bottom: 0;
+}
 .more {
   font: 13px var(--mono);
   color: var(--muted);

@@ -149,7 +149,29 @@
     <button id="f-lesson" data-k="lesson" aria-pressed="false">Lessons</button>
   </div>
   <ul class="log" id="log">
-    <li data-k="decision"><time>2026-11-25</time><div><span class="kind">Decision</span><a href="#">Why I rebuilt my portfolio without a framework</a><p>Three files, no build step, and what I gave up for it.</p></div></li>
+    <li data-k="decision" id="no-framework"><time>2026-11-25</time><div><span class="kind">Decision</span><a href="#no-framework">Why I rebuilt my portfolio without a framework</a><p>Three files, no build step, and what I gave up for it.</p>
+      <template class="detail">
+        <p>This site is three files: <code>index.html</code>, <code>styles.css</code> and <code>main.js</code>. There is no framework, no bundler and no <code>node_modules</code> folder. To run it, you open the HTML file.</p>
+        <h4>Why</h4>
+        <p>A portfolio is one page of mostly text and a few photos. I didn't want a build step standing between me and fixing a typo, and I didn't want to come back in a year to a project that no longer installs.</p>
+        <p>It was also a good excuse to see how far the browser gets on its own. Further than I expected:</p>
+        <ul>
+          <li>The case studies and this journal entry open in a native <code>&lt;dialog&gt;</code>, which handles the backdrop, the Esc key and focus for me.</li>
+          <li>The long-form content sits in <code>&lt;template&gt;</code> tags and is cloned in when you open it.</li>
+          <li>Dark mode is CSS variables plus one small script that remembers your choice.</li>
+          <li>The project carousel is about thirty lines of JavaScript.</li>
+        </ul>
+        <h4>What I gave up</h4>
+        <ul>
+          <li><strong>Components.</strong> The social icons are pasted into both the header and the footer. Change one and I have to remember the other.</li>
+          <li><strong>Writing in Markdown.</strong> Every entry, including this one, is hand-written HTML.</li>
+          <li><strong>An image pipeline.</strong> I resize and compress photos myself before adding them.</li>
+          <li><strong>Separate pages.</strong> Everything lives in one file, so it grows with every project and entry I add.</li>
+        </ul>
+        <h4>Would I do it again?</h4>
+        <p>For a site this size, yes. Deploying is a <code>git push</code>, and nothing can go out of date. If the journal grows past a handful of entries, the hand-written HTML will be the first thing to go, probably for a small script that turns Markdown files into pages.</p>
+      </template>
+    </div></li>
   </ul>
   <!-- <p class="more">All entries →</p> -->
 </div></section>
@@ -158,6 +180,11 @@
   <button class="x" id="cs-close" aria-label="Close">×</button>
   <div class="shot" id="cs-shot"></div>
   <div class="in"><h3 id="cs-title"></h3><p class="one" id="cs-one"></p><div class="stack" id="cs-stack"></div><div id="cs-body"></div></div>
+</dialog>
+
+<dialog class="cs je" id="je" aria-labelledby="je-title">
+  <button class="x" id="je-close" aria-label="Close">×</button>
+  <article class="in"><p class="je-meta"><span id="je-kind"></span> · <time id="je-date"></time></p><h3 id="je-title"></h3><p class="one" id="je-one"></p><div class="je-body" id="je-body"></div></article>
 </dialog>
 
 <dialog class="zoom" id="zoom" aria-label="Enlarged photo">
