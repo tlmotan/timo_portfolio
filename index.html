@@ -78,6 +78,17 @@
       </ul>
       <p class="tech">Angular · JavaScript · HTML · CSS · REST APIs · MySQL · Highcharts</p>
     </div></div></div></li>
+    <li><div class="logo-box"><img src="logos/sunway-calisthenics.png" alt="Sunway Calisthenics Club logo"></div><div class="when">Jul 2023 – Sep 2023</div><div><h3><button class="xp-toggle" type="button" aria-expanded="false"><span>Head Treasurer &amp; Founding Member <span class="org">· Sunway Calisthenics Club</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></h3><div class="xp-detail"><div>
+      <p class="where">Subang Jaya, Malaysia</p>
+      <ul>
+        <li>Co-founded the club from scratch; helped scale membership to <strong>156 members within 3 months</strong> of launching.</li>
+        <li>Collaborated with <a href="https://www.tiktok.com/@ginlimfitness" target="_blank" rel="noopener">@ginlimfitness</a> on promotion: <strong>3.01M social media views</strong> and <strong>237 new <a href="https://www.instagram.com/sclc_sunway/" target="_blank" rel="noopener">Instagram</a> followers in 2 weeks</strong>.</li>
+      </ul>
+      <div class="xp-videos">
+        <figure class="clip"><video src="images/sunway-calisthenics/video-1.mp4" poster="images/sunway-calisthenics/video-1.jpg" muted loop playsinline preload="none" aria-label="Preview of the first TikTok video with @ginlimfitness"></video><a href="https://www.tiktok.com/@ginlimfitness/video/7389568156366425345" target="_blank" rel="noopener">Watch on TikTok ↗</a></figure>
+        <figure class="clip"><video src="images/sunway-calisthenics/video-2.mp4" poster="images/sunway-calisthenics/video-2.jpg" muted loop playsinline preload="none" aria-label="Preview of the second TikTok video with @ginlimfitness"></video><a href="https://www.tiktok.com/@ginlimfitness/video/7376155515740523783" target="_blank" rel="noopener">Watch on TikTok ↗</a></figure>
+      </div>
+    </div></div></div></li>
   </ul>
 </div></section>
 
@@ -156,13 +167,22 @@
     <button id="f-lesson" data-k="lesson" aria-pressed="false">Lessons</button>
   </div>
   <ul class="log" id="log">
-    <!-- Card: put a photo in .cover as <img src="..." alt=""> to replace the text cover. Read time is worked out from the entry's text. -->
-    <li data-k="decision" id="no-framework">
-      <div class="cover" aria-hidden="true"><code>index.html</code><code>styles.css</code><code>main.js</code></div>
-      <span class="kind">Decision</span>
-      <a href="#no-framework">Why I rebuilt my portfolio without a framework</a>
-      <p class="one">Three files, no build step, and what I gave up for it.</p>
-      <p class="meta"><time datetime="2026-11-25">25 Nov 2026</time> · <span class="read"></span></p>
+    <li data-k="lesson" id="max-flow-traffic"><time>2026-11-28</time><div><span class="kind">Lesson</span><a href="#max-flow-traffic">What max flow couldn't tell me about traffic</a><p>JalanFlow found the bottleneck. It didn't find the traffic jam.</p>
+      <template class="detail">
+        <p>I built JalanFlow to find where traffic gets stuck between Kota Kemuning and Petaling Jaya. The idea was neat: treat the highways as a graph, give each road a capacity based on its lane count, and run max flow / min cut. The min cut is the bottleneck, the stretch every route has to squeeze through.</p>
+        <p>The algorithm worked. It just answered a different question from the one I was asking.</p>
+        <h4>Traffic doesn't flow like water</h4>
+        <p>Max flow tells you how much a network <em>could</em> carry if every road were filled perfectly. Real traffic isn't poured in evenly. People choose their own routes, and most of them choose the same ones.</p>
+        <p>So a narrow road isn't automatically a jam. If few people use it, two lanes are plenty. And the widest highway can be the one that clogs every evening, because it is the one everybody takes.</p>
+        <p>The min cut finds where capacity is lowest. A jam happens where demand is higher than capacity. Those are not the same place unless you know the demand, and lane counts from OpenStreetMap don't tell you that.</p>
+        <h4>What the result actually is</h4>
+        <p>What JalanFlow gives me is a hypothesis: if this corridor were pushed to its limit, this stretch would give out first. The real test is to put it next to real traffic data and see whether the jams are where the model says they should be.</p>
+        <h4>What I took from it</h4>
+        <p>An algorithm fitting a problem is not the same as solving it. The road network really is a graph, and max flow really does run on it. But the model left out the variable that matters most, which is where people actually want to go.</p>
+        <p>I now ask a different first question. Not "which algorithm fits this?" but "what does this model leave out, and how would I check its answer against the real thing?"</p>
+      </template>
+    </div></li>
+    <li data-k="decision" id="no-framework"><time>2026-11-25</time><div><span class="kind">Decision</span><a href="#no-framework">Why I rebuilt my portfolio without a framework</a><p>Three files, no build step, and what I gave up for it.</p>
       <template class="detail">
         <p>This site is three files: <code>index.html</code>, <code>styles.css</code> and <code>main.js</code>. There is no framework, no bundler and no <code>node_modules</code> folder. To run it, you open the HTML file.</p>
         <h4>Why</h4>
