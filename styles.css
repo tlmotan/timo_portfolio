@@ -729,20 +729,32 @@ dialog.zoom[open] {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 36px 24px;
+  gap: 24px;
 }
 .log li {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.log li:hover {
+  transform: translateY(-3px);
+  border-color: var(--muted);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.log li > :not(.cover) {
+  margin-inline: 18px;
 }
 .log li[hidden] {
   display: none;
 }
 .log .cover {
   aspect-ratio: 16 / 10;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-bottom: 1px solid var(--line);
   background: var(--soft);
   overflow: hidden;
   margin-bottom: 16px;
@@ -792,7 +804,9 @@ dialog.zoom[open] {
   line-height: 1.55;
 }
 .log .meta {
-  margin: 14px 0 0;
+  margin-top: auto;
+  margin-bottom: 18px;
+  padding-top: 14px;
   font: 13px var(--mono);
   color: var(--muted);
   font-variant-numeric: tabular-nums;
