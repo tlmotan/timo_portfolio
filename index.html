@@ -167,7 +167,13 @@
     <button id="f-lesson" data-k="lesson" aria-pressed="false">Lessons</button>
   </div>
   <ul class="log" id="log">
-    <li data-k="lesson" id="max-flow-traffic"><time>2026-11-28</time><div><span class="kind">Lesson</span><a href="#max-flow-traffic">What max flow couldn't tell me about traffic</a><p>JalanFlow found the bottleneck. It didn't find the traffic jam.</p>
+    <!-- Card: put a photo in .cover as <img src="..." alt="">, or <code> labels for a text cover. Read time is worked out from the entry's text. -->
+    <li data-k="lesson" id="max-flow-traffic">
+      <div class="cover"><img src="images/jalanflow/bottleneck.jpg" alt="" loading="lazy"></div>
+      <span class="kind">Lesson</span>
+      <a href="#max-flow-traffic">What max flow couldn't tell me about traffic</a>
+      <p class="one">JalanFlow found the bottleneck. It didn't find the traffic jam.</p>
+      <p class="meta"><time datetime="2026-11-28">28 Nov 2026</time> · <span class="read"></span></p>
       <template class="detail">
         <p>I built JalanFlow to find where traffic gets stuck between Kota Kemuning and Petaling Jaya. The idea was neat: treat the highways as a graph, give each road a capacity based on its lane count, and run max flow / min cut. The min cut is the bottleneck, the stretch every route has to squeeze through.</p>
         <p>The algorithm worked. It just answered a different question from the one I was asking.</p>
@@ -181,8 +187,13 @@
         <p>An algorithm fitting a problem is not the same as solving it. The road network really is a graph, and max flow really does run on it. But the model left out the variable that matters most, which is where people actually want to go.</p>
         <p>I now ask a different first question. Not "which algorithm fits this?" but "what does this model leave out, and how would I check its answer against the real thing?"</p>
       </template>
-    </div></li>
-    <li data-k="decision" id="no-framework"><time>2026-11-25</time><div><span class="kind">Decision</span><a href="#no-framework">Why I rebuilt my portfolio without a framework</a><p>Three files, no build step, and what I gave up for it.</p>
+    </li>
+    <li data-k="decision" id="no-framework">
+      <div class="cover" aria-hidden="true"><code>index.html</code><code>styles.css</code><code>main.js</code></div>
+      <span class="kind">Decision</span>
+      <a href="#no-framework">Why I rebuilt my portfolio without a framework</a>
+      <p class="one">Three files, no build step, and what I gave up for it.</p>
+      <p class="meta"><time datetime="2026-11-25">25 Nov 2026</time> · <span class="read"></span></p>
       <template class="detail">
         <p>This site is three files: <code>index.html</code>, <code>styles.css</code> and <code>main.js</code>. There is no framework, no bundler and no <code>node_modules</code> folder. To run it, you open the HTML file.</p>
         <h4>Why</h4>
