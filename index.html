@@ -156,7 +156,13 @@
     <button id="f-lesson" data-k="lesson" aria-pressed="false">Lessons</button>
   </div>
   <ul class="log" id="log">
-    <li data-k="decision" id="no-framework"><time>2026-11-25</time><div><span class="kind">Decision</span><a href="#no-framework">Why I rebuilt my portfolio without a framework</a><p>Three files, no build step, and what I gave up for it.</p>
+    <!-- Card: put a photo in .cover as <img src="..." alt=""> to replace the text cover. Read time is worked out from the entry's text. -->
+    <li data-k="decision" id="no-framework">
+      <div class="cover" aria-hidden="true"><code>index.html</code><code>styles.css</code><code>main.js</code></div>
+      <span class="kind">Decision</span>
+      <a href="#no-framework">Why I rebuilt my portfolio without a framework</a>
+      <p class="one">Three files, no build step, and what I gave up for it.</p>
+      <p class="meta"><time datetime="2026-11-25">25 Nov 2026</time> · <span class="read"></span></p>
       <template class="detail">
         <p>This site is three files: <code>index.html</code>, <code>styles.css</code> and <code>main.js</code>. There is no framework, no bundler and no <code>node_modules</code> folder. To run it, you open the HTML file.</p>
         <h4>Why</h4>
@@ -178,7 +184,7 @@
         <h4>Would I do it again?</h4>
         <p>For a site this size, yes. Deploying is a <code>git push</code>, and nothing can go out of date. If the journal grows past a handful of entries, the hand-written HTML will be the first thing to go, probably for a small script that turns Markdown files into pages.</p>
       </template>
-    </div></li>
+    </li>
   </ul>
   <!-- <p class="more">All entries →</p> -->
 </div></section>

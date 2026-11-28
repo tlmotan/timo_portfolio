@@ -54,11 +54,15 @@
 (() => {   // Journal: an entry with a <template class="detail"> opens in a dialog; its id doubles as a shareable #link
   const dlg = document.getElementById('je'), $ = id => document.getElementById(id);
   const entries = [...document.querySelectorAll('#log li')].filter(li => li.querySelector('template.detail'));
+  entries.forEach(li => {   // read time at ~200 words a minute
+    const words = li.querySelector('template.detail').content.textContent.trim().split(/\s+/).length;
+    const r = li.querySelector('.read'); if (r) r.textContent = Math.max(1, Math.round(words / 200)) + ' min read';
+  });
   function open(li){
     $('je-kind').textContent = li.querySelector('.kind').textContent;
-    $('je-date').textContent = li.querySelector('time').textContent;
+    $('je-date').textContent = li.querySelector('.meta').textContent;
     $('je-title').textContent = li.querySelector('a').textContent;
-    $('je-one').textContent = li.querySelector('div > p').textContent;
+    $('je-one').textContent = li.querySelector('.one').textContent;
     $('je-body').replaceChildren(li.querySelector('template.detail').content.cloneNode(true));
     dlg.showModal(); dlg.scrollTop = 0;
     if (li.id) history.replaceState(null, '', '#' + li.id);

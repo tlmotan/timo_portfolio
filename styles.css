@@ -722,51 +722,80 @@ dialog.zoom[open] {
   color: var(--bg);
   border-color: var(--fg);
 }
+/* Journal cards: cover, category, title, preview, date · read time — each on its own line */
 .log {
   list-style: none;
   margin: 0;
-  padding: 0 20px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--surface);
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 36px 24px;
 }
 .log li {
-  display: grid;
-  grid-template-columns: 96px 1fr;
-  gap: 16px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line);
-}
-.log li:last-child {
-  border-bottom: 0;
-}
-.log li > * {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
 }
-.log time {
+.log li[hidden] {
+  display: none;
+}
+.log .cover {
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--soft);
+  overflow: hidden;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 24px;
+}
+.log .cover code {
+  font: 13px var(--mono);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 4px 9px;
+}
+.log .cover:has(img) {
+  padding: 0;
+}
+.log .cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.log li:hover .cover img {
+  transform: scale(1.03);
+}
+.log .kind {
+  font: 500 12px var(--mono);
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.log a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  text-decoration: none;
+}
+.log .one {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+.log .meta {
+  margin: 14px 0 0;
   font: 13px var(--mono);
   color: var(--muted);
   font-variant-numeric: tabular-nums;
-  padding-top: 2px;
-}
-.log .kind {
-  font: 500 11px var(--mono);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  margin-right: 8px;
-}
-.log a {
-  font-weight: 500;
-  text-decoration: none;
-}
-.log a:hover {
-  text-decoration: underline;
-}
-.log p {
-  margin: 3px 0 0;
-  color: var(--muted);
-  font-size: 15px;
 }
 .log li:has(template.detail) {
   cursor: pointer;
@@ -985,7 +1014,6 @@ footer .social-icons svg {
   .hero .wrap {
     padding-block: 56px 48px;
   }
-  .log li,
   .xp > li {
     grid-template-columns: 1fr;
     gap: 4px;
