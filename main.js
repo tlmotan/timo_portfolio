@@ -86,8 +86,10 @@
   document.querySelectorAll('.xp > li').forEach(li => {
     const btn = li.querySelector('.xp-toggle');
     li.addEventListener('click', e => {
-      if (e.target.closest('a')) return;
-      btn.setAttribute('aria-expanded', li.classList.toggle('open'));
+      if (e.target.closest('a, .clip')) return;
+      const open = li.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      if (!open) li.querySelectorAll('.clip video').forEach(v => v.load());   // stop any preview and show its poster again
     });
   });
 })();
@@ -104,4 +106,19 @@
   });
   mq.addEventListener('change', label);
   label();
+})();
+(() => {   // Video previews: a short muted clip that plays on hover (mouse) or on tap, tap again to stop (touch)
+  const canHover = matchMedia('(hover: hover)');
+  document.querySelectorAll('.clip').forEach(clip => {
+    const video = clip.querySelector('video'), link = clip.querySelector('a');
+    const play = () => { video.play().catch(() => {}); };
+    const stop = () => { video.load(); };   // load() rewinds and brings the poster back
+    clip.addEventListener('mouseenter', () => { if (canHover.matches) play(); });
+    clip.addEventListener('mouseleave', () => { if (canHover.matches) stop(); });
+    clip.addEventListener('click', e => {
+      if (e.target.closest('a')) return;
+      if (canHover.matches) link.click();   // with a mouse the preview is already playing, so a click opens the full video
+      else if (video.paused) play(); else stop();
+    });
+  });
 })();
